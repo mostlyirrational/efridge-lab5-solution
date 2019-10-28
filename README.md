@@ -1,6 +1,6 @@
-#Crime Hunters
+#C rime Hunters
 
-##Task
+## Task
 
 This week's lab involves loading data from the Atlanta police department into a database for easy searching.
 
@@ -10,6 +10,6 @@ This week's lab involves loading data from the Atlanta police department into a 
 
 After loading the data, we will implement a crime controller that will search our database for crimes of a particular type.
 
-###Note 
+### Note 
 Data comes from this source:
 http://www.atlantapd.org/i-want-to/crime-data-downloads
