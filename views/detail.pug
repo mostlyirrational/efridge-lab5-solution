@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 
+        a(href='/') Crime log
+      small &nbsp;Let's clean up these streets
+  .row
+    .col-12
+      if crime
+        h2 #{crime.reportNumber} - #{crime.crimeType.name}
+        dl.dl-horizontal
+          dt Report Number
+          dd=crime.reportNumber
+
+          dt Report Date
+          dd=crime.reportDate
+
+          dt Occur Date
+          dd=crime.occurDate
+
+          dt Occur Time
+          dd=crime.occurTime
+
+          dt Address
+          dd=crime.address
+
+        img(src='https://image.maps.api.here.com/mia/1.6/mapview?app_id=44P11DgL1yo1dn4gTPR8&app_code=2y_6EUe4ZKGJ-N63SxRwwQ&z=16&c='+
+                crime.location.coordinates[1] + ',' + crime.location.coordinates[0])

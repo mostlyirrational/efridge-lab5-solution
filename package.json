@@ -1,0 +1,46 @@
+{
+  "name": "problem-8",
+  "version": "1.0.0",
+  "description": "Homework set for server side programming course at UWF.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2"
+  },
+  "author": "E.L. Fridge",
+  "license": "ISC",
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": "off",
+      "semi": [
+        "error",
+        "always",
+        {
+          "omitLastInOneLineBlock": true
+        }
+      ],
+      "camelcase": [
+        "error"
+      ]
+    }
+  },
+  "dependencies": {
+    "csv-parse": "^4.6.5",
+    "csv-parser": "^2.3.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7",
+    "neat-csv": "^5.1.0",
+    "path": "^0.12.7",
+    "pug": "^2.0.4"
+  }
+}

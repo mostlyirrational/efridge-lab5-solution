@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 
+        a(href='/') Crime log
+      small &nbsp;Let's clean up these streets
+  .row
+    .col-12
+      form(method='get' action='/')
+        select(name='type')
+          option(value="") -Choose a crime-
+          each type in crimeTypes
+            option(value=type selected=(currentCrime === type) ) #{type}
+        input(type='submit' value='Search')
+        
+      if matchingCrimes
+        table.table
+          each crime in matchingCrimes
+              tr
+                  td=crime.reportNumber
+                  td=crime.reportDate
+                  td=crime.address
+                  td
+                      a.button(href='/view/'+crime.reportNumber) View
